@@ -1,0 +1,33 @@
+server:
+  port: ${application.port}
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    url: ${database.url}
+    username: ${database.username}
+    password: ${database.password}
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      connection-timeout: 3000
+      maximum-pool-size: 150
+      max-lifetime: 1800000
+      pool-name: HikariCP
+  jpa:
+    hibernate.ddl-auto: update
+
+logging:
+  slack:
+    location: ${application.workspace}
+    webhook-uri: https://hooks.slack.com/services/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
+  level:
+    org.hibernate:
+      type.descriptor.sql: trace #show parameter binding
+      SQL: ${logging.lovel}
+
+firebase:
+  path: ${firebase.path}
+
+
