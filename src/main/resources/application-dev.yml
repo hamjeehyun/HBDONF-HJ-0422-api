@@ -9,14 +9,14 @@ spring:
 
 database:
   url: jdbc:mariadb://localhost:3306/hbd_onf_hj
-  username: root
-  password: root
+  username:
+  password:
 
 logging:
   lovel: DEBUG
 
 firebase:
-  path: "src/main/resources/hbd-onf-firebase-adminsdk-7m49q-cd688bd5b0.json"
+  path: "src/main/resources/"
 
 
 
